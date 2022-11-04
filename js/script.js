@@ -10,19 +10,22 @@ const getAlldata = async () => {
     const response = await fetch(`${BASE_URL}/students`, {
         method: 'GET',
         headers: {
-            "Content-Type": "application.json"
+            "Content-Type": "application/json"
         }
     });
     const data = await response.json();
 
     dataRender(data);
- console.log(data);
 }
 getAlldata();
 
 // -------------------------------RENDER functions------------------------------------
 
 function dataRender(data = []) {
+    const count=createElement('span','', `${data.length}` )
+    $(".count").appendChild(count)
+    // const averageMark=createElement('span','',`Average mark :${count/}%`)
+    
     data.forEach((e) => {
         const tr = createElement('tr', "tr",
             `<tr>
@@ -73,8 +76,8 @@ function postData() {
 // AGAR BUG bolsa shuyerda :)  
 
 $("#add-btn").addEventListener('click', (evt) => {
-    evt.preventDefault();      
-        // $("#edit-btn").remove();
+    evt.preventDefault();
+    // $("#edit-btn").remove();
     postData();
 })
 
@@ -128,7 +131,7 @@ $(".wrapper").addEventListener("click", (e) => {
         $(".modal-window").classList.remove("d-none");
 
         // const editBtn = createElement('button','btn btn-info w-100 mt-5 edit_btn','EDIT')       
-        $("#add-btn")?.remove();
+        $("#add-btn") ?.remove();
         $("#edit-btn").classList.remove("d-none")
 
         // let isName = $('#setname').value;
@@ -165,12 +168,12 @@ function editData() {
             lastname: isLastname,
             mark: isMark,
             marked_date: `${datenow.getHours()}:${datenow.getMinutes()}:${datenow.getSeconds()}`,
-            
+
         }),
     });
 }
 $("#edit-btn").addEventListener('click', () => {
-    
+
     editData()
 })
 
@@ -193,12 +196,60 @@ $(".close").addEventListener("click", () => {
     hideModal();
 });
 
-// ------------ CALCULATE ----------------
-const count=createElement('span','',`ss`)
-// $(".count").
-// $(".average-mark")
+
+// ------------FILTER -----------------
+const filterForm = $(".search-form");
+//  $("#filter-name")
 
 
+filterForm.addEventListener('submit', async (evt) => {
+    evt.preventDefault();
+
+    const response = await fetch(`${BASE_URL}/students`, )
+    const data = await response.json();
+
+    
+
+    function findStudent(e) {
+            let result =e.filter((data)=>data.name.includes($("#filter-name").value.trim()));
+            // console.log(result);
+            filterByMark(result)
+        
+        
+    }
+    function renderFilter(data) {
+        $('.wrapper').innerHTML="";
+        $(".count").innerHTML="";
+        const count=createElement('span','', `Count :${data.length}` )
+        $(".count").appendChild(count)
+        // const averageMark=createElement('span','',`Average mark :${count/}%`)
+
+        data.forEach((e) => {
+            const tr = createElement('tr', "tr",
+                `<tr>
+                <td>${e.id}</td>  
+                <td>${e.name} ${e.lastname}</td>   
+                <td>${e.marked_date}</td>
+                <td>${e.mark}</td>
+                <td>${e.mark>70 ? "Passed":"Failed"}</td>
+                <td> <button class="btn btn-primary edit-btn" data-edit=${e.id}><i class="bi bi-pencil-square" data-edit=${e.id}></i></button></td>
+                <td> <button class="btn btn-danger" data-del=${e.id}><i class="bi bi-trash-fill" data-del=${e.id}></i></button></td>
+            </tr>
+            `);
+    
+            $('.wrapper').appendChild(tr);
+        })
+    }
+
+    findStudent(data)
+
+    function filterByMark(item) {
+        
+            let result =item.filter(data=>data.mark >= $("#from").value && data.mark <=$("#to").value)
+        
+        renderFilter(result)
+        
+    }
+})
 
 
-// -----------------Filter ------------------

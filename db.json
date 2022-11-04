@@ -6,6 +6,34 @@
       "mark": "75",
       "marked_date": "18:59:7",
       "id": 1
+    },
+    {
+      "name": "Abbos",
+      "lastname": "Madmuroto'v",
+      "mark": "66",
+      "marked_date": "0:52:8",
+      "id": 2
+    },
+    {
+      "name": "Ali",
+      "lastname": "Madmuroto'v",
+      "mark": "44",
+      "marked_date": "0:52:8",
+      "id": 3
+    },
+    {
+      "name": "Vali",
+      "lastname": "Madmuroto'v",
+      "mark": "33",
+      "marked_date": "0:52:8",
+      "id": 4
+    },
+    {
+      "name": "Kali",
+      "lastname": "Madmuroto'v",
+      "mark": "88",
+      "marked_date": "0:52:8",
+      "id": 5
     }
   ]
 }

@@ -5,6 +5,9 @@
 }
 /* ----------- MODAL WINDOW STYLES  -------- */
 .modal-window{
+    
+
+
     position: absolute;
     width: 100% !important;
     height: 100vh;
@@ -26,11 +29,34 @@
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 
+    padding: 20px;
 }
+.modal-body h3{
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #0d6efd;
+}
+
 .close {
+    position: absolute;
     right: 17px;
     top: 17px;
     color: red;
+}
+.form{
+    margin: 20px;
+}
+.form button{
+    margin-top: 40px;
+    width: 100%;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    height: 35px;
+    border-radius: 15px;
+}
+.input-text{
+    margin: 5px;
 }
 
 

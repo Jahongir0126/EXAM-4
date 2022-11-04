@@ -18,26 +18,25 @@
 <body>
 
     <!-- ------------ Modal window ------ -->
-    <div class="modal-window d-none">
-        <div class="modal-body p-4 pt-2">
+    <div class="modal-window ">
+        <div class="modal-body ">
 
-            <h3 class="text-primary ms-4 mt-2">Add student</h3>
-            <span class="close position-absolute "><i class="bi bi-x-lg"></i></span>
-            <form class="form m-4">
-
-                <span class="input-text m-2">Name </span>
+            <h3>Add student</h3>
+            <span class="close"><i class="bi bi-x-lg"></i></span>
+            <form class="form">
+                <span class="input-text">Name </span>
                 <input type="text" class="form-control " placeholder="enter student's name" id="name" required>
 
-                <span class="input-text m-2">Lastname </span>
+                <span class="input-text">Lastname </span>
                 <input type="text" class="form-control " placeholder="enter student's lastname" id="lastname" required>
 
-                <span class="input-text m-2">Mark</span>
+                <span class="input-text">Mark</span>
                 <input type="number" class="form-control" min="0" max="100" placeholder="enter students mark" id="mark"
                     required>
 
 
-                    <button class="btn btn-primary mt-5 w-100 " id="add-btn"> Add new student</button>
-                    <button class="btn btn-info mt-5 w-100 d-none" id="edit-btn"> EDIT</button>
+                    <button class="btn-primary" id="add-btn"> Add new student</button>
+                    <button class="btn-info  d-none" id="edit-btn"> EDIT</button>
 
             </form>
         </div>

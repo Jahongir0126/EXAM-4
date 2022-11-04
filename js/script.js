@@ -16,7 +16,7 @@ const getAlldata = async () => {
     const data = await response.json();
 
     dataRender(data);
-
+ console.log(data);
 }
 getAlldata();
 
@@ -192,5 +192,13 @@ function hideModal() {
 $(".close").addEventListener("click", () => {
     hideModal();
 });
+
+// ------------ CALCULATE ----------------
+const count=createElement('span','',`ss`)
+// $(".count").
+// $(".average-mark")
+
+
+
 
 // -----------------Filter ------------------

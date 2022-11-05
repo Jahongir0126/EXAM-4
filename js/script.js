@@ -249,6 +249,11 @@ filterForm.addEventListener('submit', async (evt) => {
         
         renderFilter(result)
         
+        
+    }
+
+    function filterBySelect() {
+        
     }
 })
 

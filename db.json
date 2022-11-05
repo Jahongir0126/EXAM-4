@@ -8,32 +8,25 @@
       "id": 1
     },
     {
-      "name": "Abbos",
-      "lastname": "Madmuroto'v",
-      "mark": "66",
-      "marked_date": "0:52:8",
+      "name": "Ali",
+      "lastname": "abalo",
+      "mark": "44",
+      "marked_date": "11:1:7",
       "id": 2
     },
     {
-      "name": "Ali",
-      "lastname": "Madmuroto'v",
+      "name": "kali",
+      "lastname": "balabol",
       "mark": "44",
-      "marked_date": "0:52:8",
+      "marked_date": "11:1:24",
       "id": 3
     },
     {
-      "name": "Vali",
-      "lastname": "Madmuroto'v",
-      "mark": "33",
-      "marked_date": "0:52:8",
+      "name": "Kamron",
+      "lastname": "Marufo'v",
+      "mark": "71",
+      "marked_date": "13:40:47",
       "id": 4
-    },
-    {
-      "name": "Kali",
-      "lastname": "Madmuroto'v",
-      "mark": "88",
-      "marked_date": "0:52:8",
-      "id": 5
     }
   ]
 }

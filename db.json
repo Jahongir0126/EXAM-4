@@ -3,30 +3,9 @@
     {
       "name": "Jahongir",
       "lastname": "Tursunboyev",
-      "mark": "75",
-      "marked_date": "18:59:7",
+      "mark": "77",
+      "marked_date": "21:9:22",
       "id": 1
-    },
-    {
-      "name": "Ali",
-      "lastname": "abalo",
-      "mark": "44",
-      "marked_date": "11:1:7",
-      "id": 2
-    },
-    {
-      "name": "kali",
-      "lastname": "balabol",
-      "mark": "44",
-      "marked_date": "11:1:24",
-      "id": 3
-    },
-    {
-      "name": "Kamron",
-      "lastname": "Marufo'v",
-      "mark": "71",
-      "marked_date": "13:40:47",
-      "id": 4
     }
   ]
 }
